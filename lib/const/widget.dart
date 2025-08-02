@@ -25,6 +25,30 @@ Widget barlowBold({
     decoration: underline ? TextDecoration.underline : null,
   ),
 );
+Widget barlowRegular({
+  String text = "",
+  double? size,
+  Color? color,
+  int? maxLine,
+  TextOverflow? overflow,
+  TextAlign? textAlign,
+  bool underline = false,
+}) => Text(
+  text,
+  overflow: overflow ?? TextOverflow.ellipsis,
+  maxLines: maxLine ?? 1,
+  textAlign: textAlign,
+  textScaler: const TextScaler.linear(1),
+  style: TextStyle(
+    color: color,
+    fontSize: size ?? 14,
+    fontFamily: "Barlow",
+    fontStyle: FontStyle.normal,
+    decoration: underline ? TextDecoration.underline : null,
+  ),
+);
+
+
 
 Widget cvShowOrDownload() => TextButton(
   style: TextButton.styleFrom(backgroundColor: blue),

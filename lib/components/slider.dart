@@ -21,9 +21,10 @@ class _SlidersState extends State<Sliders> {
   Widget build(BuildContext context) => Stack(
     alignment: Alignment.bottomCenter,
     children: [
-      SizedBox(
+      Container(
         height: fullHeight(context),
         width: fullWidth(context),
+        color: black,
         child: CarouselSlider.builder(
           carouselController: _controller,
           itemCount: service.length,

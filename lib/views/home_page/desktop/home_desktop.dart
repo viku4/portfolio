@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_web_portfolio/components/blog.dart';
 import 'package:flutter_web_portfolio/components/slider.dart';
 import 'package:flutter_web_portfolio/const/colors.dart';
 import 'package:flutter_web_portfolio/const/widget.dart';
@@ -18,10 +19,12 @@ class HomeDesktop extends StatefulWidget {
 class _HomeDesktopState extends State<HomeDesktop> {
   final GlobalKey _servicesKey = GlobalKey();
   final GlobalKey _homeKey = GlobalKey();
+  final GlobalKey _blogKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: black,
       body: Column(
         children: [
           Container(
@@ -29,10 +32,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
             height: 60,
             padding: EdgeInsets.only(top: 10, bottom: 10),
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.black.withOpacity(.5), Colors.black],
-              ),
-              // color: black,
+              gradient: LinearGradient(colors: [Colors.white, Colors.black]),
+              color: black,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,6 +46,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     width: 200,
                     height: 50,
                     decoration: BoxDecoration(
+                      // color: white,
                       image: DecorationImage(
                         image: AssetImage("assets/Indian-removebg-preview.png"),
                         fit: BoxFit.cover,
@@ -99,7 +101,13 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       child: barlowBold(text: "Service", size: 15),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Scrollable.ensureVisible(
+                          _blogKey.currentContext!,
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeInOut,
+                        );
+                      },
                       style: ButtonStyle(
                         foregroundColor:
                             MaterialStateProperty.resolveWith<Color>((states) {
@@ -155,90 +163,82 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     width: fullWidth(context),
                     height: fullHeight(context),
                     padding: EdgeInsets.only(top: 10, bottom: 10),
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Colors.black.withOpacity(.5), Colors.black],
-                      ),
-                      // color: black,
-                    ),
+                    decoration: BoxDecoration(color: black),
                     child: Column(
                       children: [
                         Expanded(
-                          child: Container(
-                            color: black,
-                            padding: EdgeInsets.all(20),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  child: Container(
-                                    padding: EdgeInsets.all(10),
-                                    alignment: Alignment.center,
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "I'm trying to manage myself, on just my portfolio.",
-                                          style: TextStyle(
-                                            color: blue,
-                                            fontSize: 60,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 30,
+                                    vertical: 10,
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "I'm trying to manage myself, on just my portfolio.",
+                                        style: TextStyle(
+                                          color: blue,
+                                          fontSize: 60,
 
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          maxLines: 3,
+                                          fontWeight: FontWeight.bold,
                                         ),
-                                        Text(
-                                          "Hi, I'm Vikash — a Flutter Developer. I specialize in building high-performance, cross-platform mobile apps. If you're looking for a reliable developer to create or maintain your app, feel free to get in touch.",
-                                          style: TextStyle(
-                                            color: white,
-                                            fontSize: 20,
-                                          ),
-                                          maxLines: 4,
-                                        ),
-                                        const Gap(10),
-                                        cvShowOrDownload(),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: black,
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                          "assets/1724424502011-removebg-preview.png",
-                                        ),
-                                        fit: BoxFit.contain,
+                                        maxLines: 3,
                                       ),
-                                    ),
+                                      Text(
+                                        "Hi, I'm Vikash — a Flutter Developer. I specialize in building high-performance, cross-platform mobile apps. If you're looking for a reliable developer to create or maintain your app, feel free to get in touch.",
+                                        style: TextStyle(
+                                          color: white,
+                                          fontSize: 20,
+                                        ),
+                                        maxLines: 4,
+                                      ),
+                                      const Gap(10),
+                                      cvShowOrDownload(),
+                                    ],
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                              Expanded(
+                                child: Image.asset(
+                                  "assets/1724424502011-removebg-preview.png",
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
                     ),
                   ),
+
                   Container(
+                    key: _servicesKey,
                     width: fullWidth(context),
                     height: 60,
                     alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Colors.black.withOpacity(.5), Colors.black],
-                      ),
-                    ),
+                    decoration: BoxDecoration(color: blue),
                     child: barlowBold(text: "Services", color: white, size: 20),
                   ),
-                  SizedBox(
+                  Sliders(),
+                  const Gap(20),
+                  Container(
+                    key: _blogKey,
                     width: fullWidth(context),
-                    // height: fullHeight(context),
-                    key: _servicesKey,
-                    child: Sliders(),
+                    height: 60,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(color: blue),
+                    child: barlowBold(text: "Blog", color: white, size: 20),
+                  ),
+
+                  Container(
+                    width: double.infinity,
+                    color: black,
+                    child: Blog(),
                   ),
                 ],
               ),

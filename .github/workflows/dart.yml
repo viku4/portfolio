@@ -27,6 +27,14 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Build Flutter Web
+        run: flutter build web
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/web
+
       # Uncomment this step to verify the use of 'dart format' on each commit.
       # - name: Verify formatting
       #   run: dart format --output=none --set-exit-if-changed .

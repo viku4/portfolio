@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/Router/page_router.dart';
-import 'package:flutter_web_portfolio/views/home_page/home_page.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() {
+  setUrlStrategy(PathUrlStrategy()); 
   runApp(const MyApp());
 }
 
@@ -23,7 +24,9 @@ class _MyAppState extends State<MyApp> {
       routerDelegate: router.routerDelegate,
       routeInformationParser: router.routeInformationParser,
       routeInformationProvider: router.routeInformationProvider,
-      debugShowCheckedModeBanner: false,  ///vvhvh
+      debugShowCheckedModeBanner: false,
+
+      ///vvhvh
     );
   }
 }

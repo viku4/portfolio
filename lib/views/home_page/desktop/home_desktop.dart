@@ -24,7 +24,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: black,
+      backgroundColor: backgroundColor,
       body: Column(
         children: [
           Container(
@@ -32,8 +32,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
             height: 60,
             padding: EdgeInsets.only(top: 10, bottom: 10),
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [Colors.white, Colors.black]),
-              color: black,
+              // gradient: LinearGradient(colors: [Colors.white, Colors.black]),
+              // color: black,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,7 +48,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     decoration: BoxDecoration(
                       // color: white,
                       image: DecorationImage(
-                        image: AssetImage("assets/Indian-removebg-preview.png"),
+                        image: AssetImage("assets/logo/white_logo.png"),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -68,7 +68,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         foregroundColor:
                             MaterialStateProperty.resolveWith<Color>((states) {
                               if (states.contains(MaterialState.hovered)) {
-                                return blue;
+                                return textColor;
                               }
                               return white;
                             }),
@@ -90,7 +90,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         foregroundColor:
                             MaterialStateProperty.resolveWith<Color>((states) {
                               if (states.contains(MaterialState.hovered)) {
-                                return blue;
+                                return textColor;
                               }
                               return white;
                             }),
@@ -112,7 +112,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         foregroundColor:
                             MaterialStateProperty.resolveWith<Color>((states) {
                               if (states.contains(MaterialState.hovered)) {
-                                return blue;
+                                return textColor;
                               }
                               return white;
                             }),
@@ -128,7 +128,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         foregroundColor:
                             MaterialStateProperty.resolveWith<Color>((states) {
                               if (states.contains(MaterialState.hovered)) {
-                                return blue;
+                                return textColor;
                               }
                               return white;
                             }),
@@ -140,7 +140,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     ),
                     const Gap(20),
                     TextButton(
-                      style: TextButton.styleFrom(backgroundColor: blue),
+                      style: TextButton.styleFrom(backgroundColor: textColor),
                       onPressed: () {},
                       child: barlowBold(
                         text: "Contact",
@@ -148,6 +148,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                         size: 15,
                       ),
                     ),
+                    const Gap(20),
                   ],
                 ),
               ],
@@ -163,7 +164,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     width: fullWidth(context),
                     height: fullHeight(context),
                     padding: EdgeInsets.only(top: 10, bottom: 10),
-                    decoration: BoxDecoration(color: black),
+                    // decoration: BoxDecoration(color: black),
                     child: Column(
                       children: [
                         Expanded(
@@ -183,7 +184,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                       Text(
                                         "I'm trying to manage myself, on just my portfolio.",
                                         style: TextStyle(
-                                          color: blue,
+                                          color: textColor,
                                           fontSize: 60,
 
                                           fontWeight: FontWeight.bold,
@@ -205,8 +206,70 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 ),
                               ),
                               Expanded(
-                                child: Image.asset(
-                                  "assets/1724424502011-removebg-preview.png",
+                                child: ClipRRect(
+                                  child: Stack(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(vertical: 20),
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            color: backgroundColor,
+                                            shape: BoxShape.circle,
+                                        
+                                            // border: Border.all(
+                                            //   color: white,
+                                            //   width: 10,
+                                            // ),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: textColor.withOpacity(0.5),
+                                                blurRadius: 10,
+                                                spreadRadius: 2,
+                                                offset: Offset(4, 4),
+                                                blurStyle: BlurStyle.normal,
+                                              ),
+                                              //   BoxShadow(
+                                              //   color: Colors.red.withOpacity(
+                                              //     0.8,
+                                              //   ),
+                                              //   blurRadius: 0.5,
+                                              //   offset: Offset(0.5, 0.5),
+                                              //   spreadRadius: 10,
+                                              //   blurStyle: BlurStyle.normal,
+                                              // ),
+                                            ],
+                                        
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                "assets/logo/pic.png",
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        bottom: 100,
+                                        right: 100,
+                                        child: Container(
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: 20,
+                                            vertical: 10,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            color: textColor,
+                                            borderRadius: BorderRadius.circular(
+                                              10,
+                                            ),
+                                          ),
+                                          child: barlowBold(
+                                            text: "2.5 Years of Experience",
+                                            color: white,
+                                            size: 15,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],

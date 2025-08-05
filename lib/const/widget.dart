@@ -51,7 +51,7 @@ Widget barlowRegular({
 
 
 Widget cvShowOrDownload() => TextButton(
-  style: TextButton.styleFrom(backgroundColor: blue),
+  style: TextButton.styleFrom(backgroundColor: textColor),
   onPressed: () {
     const url = 'assets/cv/Vikash Kumar (1)-2.pdf'; // path inside web/assets
     html.AnchorElement(href: url)

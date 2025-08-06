@@ -201,6 +201,110 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                       ),
                                       const Gap(10),
                                       cvShowOrDownload(),
+                                      const Gap(20),
+                                      Row(
+                                        children: [
+                                          InkWell(
+                                            onTap: () async {
+                                              await redirectWeb(
+                                                baseUrl:
+                                                    "https://www.instagram.com/indiancoder.in",
+                                              );
+                                            },
+                                            child: Container(
+                                              width: 50,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: textColor
+                                                        .withOpacity(0.8),
+                                                    blurRadius: 10,
+                                                    spreadRadius: 2,
+                                                    offset: Offset(2, 2),
+                                                    blurStyle: BlurStyle.normal,
+                                                  ),
+                                                ],
+                                                color: backgroundColor,
+                                                shape: BoxShape.circle,
+
+                                                image: DecorationImage(
+                                                  fit: BoxFit.contain,
+                                                  image: AssetImage(
+                                                    "assets/socialmedia/instagram.png",
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          const Gap(20),
+                                          InkWell(
+                                            onTap: () async {
+                                              await redirectWeb(
+                                                baseUrl:
+                                                    "https://github.com/viku4/",
+                                              );
+                                            },
+                                            child: Container(
+                                              width: 50,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: textColor
+                                                        .withOpacity(0.8),
+                                                    blurRadius: 10,
+                                                    spreadRadius: 2,
+                                                    offset: Offset(2, 2),
+                                                    blurStyle: BlurStyle.normal,
+                                                  ),
+                                                ],
+                                                color: backgroundColor,
+                                                shape: BoxShape.circle,
+                                                image: DecorationImage(
+                                                  fit: BoxFit.contain,
+                                                  image: AssetImage(
+                                                    "assets/socialmedia/github.png",
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          const Gap(20),
+                                          InkWell(
+                                            onTap: ()async {
+                                                await redirectWeb(
+                                                baseUrl:
+                                                    "https://www.linkedin.com/in/vikash-srivastav-68b126233/",
+                                              );
+                                            },
+                                            child: Container(
+                                              width: 50,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: textColor
+                                                        .withOpacity(0.8),
+                                                    blurRadius: 10,
+                                                    spreadRadius: 2,
+                                                    offset: Offset(2, 2),
+                                                    blurStyle: BlurStyle.normal,
+                                                  ),
+                                                ],
+                                                color: backgroundColor,
+                                                shape: BoxShape.circle,
+                                                image: DecorationImage(
+                                                  fit: BoxFit.contain,
+                                                  image: AssetImage(
+                                                    "assets/socialmedia/linkdin.png",
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                 ),

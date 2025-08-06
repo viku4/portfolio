@@ -185,8 +185,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                         "I'm trying to manage myself, on just my portfolio.",
                                         style: TextStyle(
                                           color: textColor,
-                                          fontSize: 60,
-
+                                          fontSize: 45,
                                           fontWeight: FontWeight.bold,
                                         ),
                                         maxLines: 3,

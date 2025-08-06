@@ -159,247 +159,235 @@ class _HomeTabletState extends State<HomeTablet> {
                     // decoration: BoxDecoration(color: black),
                     child: Column(
                       children: [
-                        Expanded(
+                        const Gap(10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              height: fullHeight(context) / 1.5,
+                              width: fullWidth(context) / 2,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 30,
+                                vertical: 10,
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "I'm trying to manage myself, on just my portfolio.",
+                                    style: TextStyle(
+                                      color: textColor,
+                                      fontSize: 35,
+
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    maxLines: 3,
+                                  ),
+                                  Text(
+                                    "Hi, I'm Vikash — a Flutter Developer. I specialize in building high-performance, cross-platform mobile apps. If you're looking for a reliable developer to create or maintain your app, feel free to get in touch.",
+                                    style: TextStyle(
+                                      color: white,
+                                      fontSize: 20,
+                                    ),
+                                    maxLines: 4,
+                                  ),
+                                  const Gap(10),
+                                  cvShowOrDownload(),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              height: fullHeight(context) / 1.5,
+                              width: fullWidth(context) / 2,
+                            
+                              decoration: BoxDecoration(
+                                color: backgroundColor,
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: textColor.withOpacity(0.8),
+                                    blurRadius: 10,
+                                    spreadRadius: 5,
+                                    offset: Offset(4, 4),
+                                    blurStyle: BlurStyle.normal,
+                                  ),
+                                ],
+                                image: DecorationImage(image: AssetImage("assets/logo/pic.png",))
+                              ),
+                            
+                            ),
+                          ],
+                        ),
+                        const Gap(30),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Row(
                             children: [
                               Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 30,
-                                    vertical: 10,
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "I'm trying to manage myself, on just my portfolio.",
-                                        style: TextStyle(
-                                          color: textColor,
-                                          fontSize: 60,
+                                child: Row(
+                                  children: [
+                                    InkWell(
+                                      onTap: () async {
+                                        await redirectWeb(
+                                          baseUrl:
+                                              "https://www.instagram.com/indiancoder.in",
+                                        );
+                                      },
+                                      child: Container(
+                                        width: 50,
+                                        height: 50,
+                                        decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: textColor.withOpacity(0.8),
+                                              blurRadius: 10,
+                                              spreadRadius: 2,
+                                              offset: Offset(2, 2),
+                                              blurStyle: BlurStyle.normal,
+                                            ),
+                                          ],
+                                          color: backgroundColor,
+                                          shape: BoxShape.circle,
 
-                                          fontWeight: FontWeight.bold,
+                                          image: DecorationImage(
+                                            fit: BoxFit.contain,
+                                            image: AssetImage(
+                                              "assets/socialmedia/instagram.png",
+                                            ),
+                                          ),
                                         ),
-                                        maxLines: 3,
                                       ),
-                                      Text(
-                                        "Hi, I'm Vikash — a Flutter Developer. I specialize in building high-performance, cross-platform mobile apps. If you're looking for a reliable developer to create or maintain your app, feel free to get in touch.",
-                                        style: TextStyle(
-                                          color: white,
-                                          fontSize: 20,
+                                    ),
+                                    const Gap(20),
+                                    InkWell(
+                                      onTap: () async {
+                                        await redirectWeb(
+                                          baseUrl: "https://github.com/viku4/",
+                                        );
+                                      },
+                                      child: Container(
+                                        width: 50,
+                                        height: 50,
+                                        decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: textColor.withOpacity(0.8),
+                                              blurRadius: 10,
+                                              spreadRadius: 2,
+                                              offset: Offset(2, 2),
+                                              blurStyle: BlurStyle.normal,
+                                            ),
+                                          ],
+                                          color: backgroundColor,
+                                          shape: BoxShape.circle,
+                                          image: DecorationImage(
+                                            fit: BoxFit.contain,
+                                            image: AssetImage(
+                                              "assets/socialmedia/github.png",
+                                            ),
+                                          ),
                                         ),
-                                        maxLines: 4,
                                       ),
-                                      const Gap(10),
-                                      cvShowOrDownload(),
-                                      const Gap(20),
-                                      Row(
-                                        children: [
-                                          InkWell(
-                                            onTap: () async {
-                                              await redirectWeb(
-                                                baseUrl:
-                                                    "https://www.instagram.com/indiancoder.in",
-                                              );
-                                            },
-                                            child: Container(
-                                              width: 50,
-                                              height: 50,
-                                              decoration: BoxDecoration(
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: textColor
-                                                        .withOpacity(0.8),
-                                                    blurRadius: 10,
-                                                    spreadRadius: 2,
-                                                    offset: Offset(2, 2),
-                                                    blurStyle: BlurStyle.normal,
-                                                  ),
-                                                ],
-                                                color: backgroundColor,
-                                                shape: BoxShape.circle,
-
-                                                image: DecorationImage(
-                                                  fit: BoxFit.contain,
-                                                  image: AssetImage(
-                                                    "assets/socialmedia/instagram.png",
-                                                  ),
-                                                ),
-                                              ),
+                                    ),
+                                    const Gap(20),
+                                    InkWell(
+                                      onTap: () async {
+                                        await redirectWeb(
+                                          baseUrl:
+                                              "https://www.linkedin.com/in/vikash-srivastav-68b126233/",
+                                        );
+                                      },
+                                      child: Container(
+                                        width: 50,
+                                        height: 50,
+                                        decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: textColor.withOpacity(0.8),
+                                              blurRadius: 10,
+                                              spreadRadius: 2,
+                                              offset: Offset(2, 2),
+                                              blurStyle: BlurStyle.normal,
+                                            ),
+                                          ],
+                                          color: backgroundColor,
+                                          shape: BoxShape.circle,
+                                          image: DecorationImage(
+                                            fit: BoxFit.contain,
+                                            image: AssetImage(
+                                              "assets/socialmedia/linkdin.png",
                                             ),
                                           ),
-                                          const Gap(20),
-                                          InkWell(
-                                            onTap: () async {
-                                              await redirectWeb(
-                                                baseUrl:
-                                                    "https://github.com/viku4/",
-                                              );
-                                            },
-                                            child: Container(
-                                              width: 50,
-                                              height: 50,
-                                              decoration: BoxDecoration(
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: textColor
-                                                        .withOpacity(0.8),
-                                                    blurRadius: 10,
-                                                    spreadRadius: 2,
-                                                    offset: Offset(2, 2),
-                                                    blurStyle: BlurStyle.normal,
-                                                  ),
-                                                ],
-                                                color: backgroundColor,
-                                                shape: BoxShape.circle,
-                                                image: DecorationImage(
-                                                  fit: BoxFit.contain,
-                                                  image: AssetImage(
-                                                    "assets/socialmedia/github.png",
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const Gap(20),
-                                          InkWell(
-                                            onTap: () async {
-                                              await redirectWeb(
-                                                baseUrl:
-                                                    "https://www.linkedin.com/in/vikash-srivastav-68b126233/",
-                                              );
-                                            },
-                                            child: Container(
-                                              width: 50,
-                                              height: 50,
-                                              decoration: BoxDecoration(
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: textColor
-                                                        .withOpacity(0.8),
-                                                    blurRadius: 10,
-                                                    spreadRadius: 2,
-                                                    offset: Offset(2, 2),
-                                                    blurStyle: BlurStyle.normal,
-                                                  ),
-                                                ],
-                                                color: backgroundColor,
-                                                shape: BoxShape.circle,
-                                                image: DecorationImage(
-                                                  fit: BoxFit.contain,
-                                                  image: AssetImage(
-                                                    "assets/socialmedia/linkdin.png",
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
+                                        ),
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
                               Expanded(
-                                child: ClipRRect(
-                                  child: Stack(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                          vertical: 20,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Container(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 10,
+                                          vertical: 10,
                                         ),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            color: backgroundColor,
-                                            shape: BoxShape.circle,
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: textColor.withOpacity(
-                                                  0.8,
-                                                ),
-                                                blurRadius: 10,
-                                                spreadRadius: 5,
-                                                offset: Offset(4, 4),
-                                                blurStyle: BlurStyle.normal,
-                                              ),
-                                            ],
-
-                                            image: DecorationImage(
-                                              fit: BoxFit.contain,
-                                              image: AssetImage(
-                                                "assets/logo/pic.png",
-                                              ),
-                                            ),
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: backgroundColor,
+                                          borderRadius: BorderRadius.circular(
+                                            10,
                                           ),
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: cColor.withOpacity(.5),
+                                              blurRadius: 5,
+                                              spreadRadius: 2,
+                                              offset: Offset(2, 2),
+                                              blurStyle: BlurStyle.normal,
+                                            ),
+                                          ],
+                                        ),
+                                        child: barlowBold(
+                                          text: "2.5 Years of Experience",
+                                          color: white,
+                                          size: 12,
                                         ),
                                       ),
-                                      Positioned(
-                                        top: 10,
-                                        left: 20,
-                                        child: Container(
-                                          padding: EdgeInsets.symmetric(
-                                            horizontal: 20,
-                                            vertical: 10,
+                                    ),
+                                    const Gap(20),
+                                    Expanded(
+                                      child: Container(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 10,
+                                          vertical: 10,
+                                        ),
+                                        alignment: Alignment.center,
+                                        decoration: BoxDecoration(
+                                          color: backgroundColor,
+                                          borderRadius: BorderRadius.circular(
+                                            10,
                                           ),
-                                          decoration: BoxDecoration(
-                                            color: backgroundColor,
-                                            borderRadius: BorderRadius.circular(
-                                              10,
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: textColor.withOpacity(.5),
+                                              blurRadius: 5,
+                                              spreadRadius: 2,
+                                              offset: Offset(2, 2),
+                                              blurStyle: BlurStyle.normal,
                                             ),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: textColor.withOpacity(
-                                                  .5,
-                                                ),
-                                                blurRadius: 5,
-                                                spreadRadius: 2,
-                                                offset: Offset(2, 2),
-                                                blurStyle: BlurStyle.normal,
-                                              ),
-                                            ],
-                                          ),
-                                          child: barlowBold(
-                                            text: "2.5 Years of Experience",
-                                            color: white,
-                                            size: 15,
-                                          ),
+                                          ],
+                                        ),
+                                        child: barlowBold(
+                                          text: "10+ Projects Completed",
+                                          color: white,
+                                          size: 12,
                                         ),
                                       ),
-                                      Positioned(
-                                        top: 70,
-                                        left: 50,
-                                        child: Container(
-                                          padding: EdgeInsets.symmetric(
-                                            horizontal: 20,
-                                            vertical: 10,
-                                          ),
-                                          decoration: BoxDecoration(
-                                            color: backgroundColor,
-                                            borderRadius: BorderRadius.circular(
-                                              10,
-                                            ),
-                                            boxShadow: [
-                                              BoxShadow(
-                                                color: textColor.withOpacity(
-                                                  .5,
-                                                ),
-                                                blurRadius: 5,
-                                                spreadRadius: 2,
-                                                offset: Offset(2, 2),
-                                                blurStyle: BlurStyle.normal,
-                                              ),
-                                            ],
-                                          ),
-                                          child: barlowBold(
-                                            text: "10+ Projects Completed",
-                                            color: white,
-                                            size: 15,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],

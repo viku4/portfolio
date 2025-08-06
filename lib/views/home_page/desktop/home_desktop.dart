@@ -210,35 +210,25 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                   child: Stack(
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsets.symmetric(vertical: 20),
+                                        padding: const EdgeInsets.symmetric(
+                                          vertical: 20,
+                                        ),
                                         child: Container(
                                           decoration: BoxDecoration(
                                             color: backgroundColor,
                                             shape: BoxShape.circle,
-                                        
-                                            // border: Border.all(
-                                            //   color: white,
-                                            //   width: 10,
-                                            // ),
                                             boxShadow: [
                                               BoxShadow(
-                                                color: textColor.withOpacity(0.5),
+                                                color: textColor.withOpacity(
+                                                  0.8,
+                                                ),
                                                 blurRadius: 10,
-                                                spreadRadius: 2,
+                                                spreadRadius: 5,
                                                 offset: Offset(4, 4),
                                                 blurStyle: BlurStyle.normal,
                                               ),
-                                              //   BoxShadow(
-                                              //   color: Colors.red.withOpacity(
-                                              //     0.8,
-                                              //   ),
-                                              //   blurRadius: 0.5,
-                                              //   offset: Offset(0.5, 0.5),
-                                              //   spreadRadius: 10,
-                                              //   blurStyle: BlurStyle.normal,
-                                              // ),
                                             ],
-                                        
+
                                             image: DecorationImage(
                                               image: AssetImage(
                                                 "assets/logo/pic.png",
@@ -248,21 +238,64 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                         ),
                                       ),
                                       Positioned(
-                                        bottom: 100,
-                                        right: 100,
+                                        top: 10,
+                                        left: 20,
                                         child: Container(
                                           padding: EdgeInsets.symmetric(
                                             horizontal: 20,
                                             vertical: 10,
                                           ),
                                           decoration: BoxDecoration(
-                                            color: textColor,
+                                            color: backgroundColor,
                                             borderRadius: BorderRadius.circular(
                                               10,
                                             ),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: textColor.withOpacity(
+                                                  .5,
+                                                ),
+                                                blurRadius: 5,
+                                                spreadRadius: 2,
+                                                offset: Offset(2, 2),
+                                                blurStyle: BlurStyle.normal,
+                                              ),
+                                            ],
                                           ),
                                           child: barlowBold(
                                             text: "2.5 Years of Experience",
+                                            color: white,
+                                            size: 15,
+                                          ),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        top: 70,
+                                        left: 50,
+                                        child: Container(
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: 20,
+                                            vertical: 10,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            color: backgroundColor,
+                                            borderRadius: BorderRadius.circular(
+                                              10,
+                                            ),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: textColor.withOpacity(
+                                                  .5,
+                                                ),
+                                                blurRadius: 5,
+                                                spreadRadius: 2,
+                                                offset: Offset(2, 2),
+                                                blurStyle: BlurStyle.normal,
+                                              ),
+                                            ],
+                                          ),
+                                          child: barlowBold(
+                                            text: "10+ Projects Completed",
                                             color: white,
                                             size: 15,
                                           ),

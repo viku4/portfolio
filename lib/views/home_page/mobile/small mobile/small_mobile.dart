@@ -295,7 +295,7 @@ class _SmallMobileState extends State<SmallMobile> {
                                           color: backgroundColor,
                                           borderRadius: BorderRadius.circular(
                                             10,
-                                          ),
+                                          ),  
                                           boxShadow: [
                                             BoxShadow(
                                               color: textColor.withOpacity(.5),

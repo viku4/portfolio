@@ -58,7 +58,8 @@ class _SmallMobileState extends State<SmallMobile> {
                       children: [
                         TextButton(
                           style: TextButton.styleFrom(backgroundColor: blue),
-                          onPressed: () {},
+                          onPressed: () async {
+                        await launchEmail();},
                           child: barlowBold(
                             text: "Contact",
                             color: white,
@@ -246,6 +247,7 @@ class _SmallMobileState extends State<SmallMobile> {
                                           ],
 
                                           image: DecorationImage(
+                                             fit: BoxFit.contain,
                                             image: AssetImage(
                                               "assets/logo/pic.png",
                                             ),
@@ -277,7 +279,7 @@ class _SmallMobileState extends State<SmallMobile> {
                                           ],
                                         ),
                                         child: barlowBold(
-                                          text: "2.5 Years of Experience",
+                                          text: "2.5+ Years of Experience",
                                           color: white,
                                           size: 10,
                                         ),

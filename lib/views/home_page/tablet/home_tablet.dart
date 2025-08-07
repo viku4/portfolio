@@ -133,7 +133,9 @@ class _HomeTabletState extends State<HomeTablet> {
                     const Gap(20),
                     TextButton(
                       style: TextButton.styleFrom(backgroundColor: textColor),
-                      onPressed: () {},
+                      onPressed: () async {
+                        await launchEmail();
+                      },
                       child: barlowBold(
                         text: "Contact",
                         color: white,
@@ -200,7 +202,7 @@ class _HomeTabletState extends State<HomeTablet> {
                             Container(
                               height: fullHeight(context) / 1.5,
                               width: fullWidth(context) / 2,
-                            
+
                               decoration: BoxDecoration(
                                 color: backgroundColor,
                                 shape: BoxShape.circle,
@@ -213,9 +215,11 @@ class _HomeTabletState extends State<HomeTablet> {
                                     blurStyle: BlurStyle.normal,
                                   ),
                                 ],
-                                image: DecorationImage(image: AssetImage("assets/logo/pic.png",))
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage("assets/logo/pic.png"),
+                                ),
                               ),
-                            
                             ),
                           ],
                         ),
@@ -351,7 +355,7 @@ class _HomeTabletState extends State<HomeTablet> {
                                           ],
                                         ),
                                         child: barlowBold(
-                                          text: "2.5 Years of Experience",
+                                          text: "2.5+ Years of Experience",
                                           color: white,
                                           size: 12,
                                         ),

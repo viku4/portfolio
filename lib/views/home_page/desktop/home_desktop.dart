@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/components/blog.dart';
 import 'package:flutter_web_portfolio/components/slider.dart';
 import 'package:flutter_web_portfolio/const/colors.dart';
 import 'package:flutter_web_portfolio/const/widget.dart';
@@ -141,7 +140,9 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     const Gap(20),
                     TextButton(
                       style: TextButton.styleFrom(backgroundColor: textColor),
-                      onPressed: () {},
+                      onPressed: () async {
+                        await launchEmail();
+                      },
                       child: barlowBold(
                         text: "Contact",
                         color: white,
@@ -175,8 +176,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   "I'm trying to manage myself, on just my portfolio.",
@@ -189,10 +189,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                 ),
                                 Text(
                                   "Hi, I'm Vikash — a Flutter Developer. I specialize in building high-performance, cross-platform mobile apps. If you're looking for a reliable developer to create or maintain your app, feel free to get in touch.",
-                                  style: TextStyle(
-                                    color: white,
-                                    fontSize: 20,
-                                  ),
+                                  style: TextStyle(color: white, fontSize: 20),
                                   maxLines: 4,
                                 ),
                                 const Gap(10),
@@ -213,8 +210,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                         decoration: BoxDecoration(
                                           boxShadow: [
                                             BoxShadow(
-                                              color: textColor
-                                                  .withOpacity(0.8),
+                                              color: textColor.withOpacity(0.8),
                                               blurRadius: 10,
                                               spreadRadius: 2,
                                               offset: Offset(2, 2),
@@ -223,7 +219,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                           ],
                                           color: backgroundColor,
                                           shape: BoxShape.circle,
-                                        
+
                                           image: DecorationImage(
                                             fit: BoxFit.contain,
                                             image: AssetImage(
@@ -237,8 +233,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     InkWell(
                                       onTap: () async {
                                         await redirectWeb(
-                                          baseUrl:
-                                              "https://github.com/viku4/",
+                                          baseUrl: "https://github.com/viku4/",
                                         );
                                       },
                                       child: Container(
@@ -247,8 +242,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                         decoration: BoxDecoration(
                                           boxShadow: [
                                             BoxShadow(
-                                              color: textColor
-                                                  .withOpacity(0.8),
+                                              color: textColor.withOpacity(0.8),
                                               blurRadius: 10,
                                               spreadRadius: 2,
                                               offset: Offset(2, 2),
@@ -268,8 +262,8 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     ),
                                     const Gap(20),
                                     InkWell(
-                                      onTap: ()async {
-                                          await redirectWeb(
+                                      onTap: () async {
+                                        await redirectWeb(
                                           baseUrl:
                                               "https://www.linkedin.com/in/vikash-srivastav-68b126233/",
                                         );
@@ -280,8 +274,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                         decoration: BoxDecoration(
                                           boxShadow: [
                                             BoxShadow(
-                                              color: textColor
-                                                  .withOpacity(0.8),
+                                              color: textColor.withOpacity(0.8),
                                               blurRadius: 10,
                                               spreadRadius: 2,
                                               offset: Offset(2, 2),
@@ -319,17 +312,16 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                       shape: BoxShape.circle,
                                       boxShadow: [
                                         BoxShadow(
-                                          color: textColor.withOpacity(
-                                            0.8,
-                                          ),
+                                          color: textColor.withOpacity(0.8),
                                           blurRadius: 10,
                                           spreadRadius: 5,
                                           offset: Offset(4, 4),
                                           blurStyle: BlurStyle.normal,
                                         ),
                                       ],
-                                        
+
                                       image: DecorationImage(
+                                        fit: BoxFit.cover,
                                         image: AssetImage(
                                           "assets/logo/pic.png",
                                         ),
@@ -347,14 +339,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     ),
                                     decoration: BoxDecoration(
                                       color: backgroundColor,
-                                      borderRadius: BorderRadius.circular(
-                                        10,
-                                      ),
+                                      borderRadius: BorderRadius.circular(10),
                                       boxShadow: [
                                         BoxShadow(
-                                          color: textColor.withOpacity(
-                                            .5,
-                                          ),
+                                          color: textColor.withOpacity(.5),
                                           blurRadius: 5,
                                           spreadRadius: 2,
                                           offset: Offset(2, 2),
@@ -363,7 +351,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                       ],
                                     ),
                                     child: barlowBold(
-                                      text: "2.5 Years of Experience",
+                                      text: "2.5+ Years of Experience",
                                       color: white,
                                       size: 15,
                                     ),
@@ -379,14 +367,10 @@ class _HomeDesktopState extends State<HomeDesktop> {
                                     ),
                                     decoration: BoxDecoration(
                                       color: backgroundColor,
-                                      borderRadius: BorderRadius.circular(
-                                        10,
-                                      ),
+                                      borderRadius: BorderRadius.circular(10),
                                       boxShadow: [
                                         BoxShadow(
-                                          color: textColor.withOpacity(
-                                            .5,
-                                          ),
+                                          color: textColor.withOpacity(.5),
                                           blurRadius: 5,
                                           spreadRadius: 2,
                                           offset: Offset(2, 2),
@@ -408,7 +392,6 @@ class _HomeDesktopState extends State<HomeDesktop> {
                       ],
                     ),
                   ),
-
                   Container(
                     key: _servicesKey,
                     width: fullWidth(context),
@@ -427,13 +410,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     decoration: BoxDecoration(color: blue),
                     child: barlowBold(text: "Blog", color: white, size: 20),
                   ),
-
-                  Container(
-                    width: double.infinity,
-                    color: black,
-                    child: Blog(),
-                  ),
-                ],
+                  ],
               ),
             ),
           ),

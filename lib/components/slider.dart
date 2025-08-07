@@ -24,7 +24,7 @@ class _SlidersState extends State<Sliders> {
       Container(
         height: fullHeight(context),
         width: fullWidth(context),
-        color: black,
+        color: backgroundColor,
         child: CarouselSlider.builder(
           carouselController: _controller,
           itemCount: service.length,

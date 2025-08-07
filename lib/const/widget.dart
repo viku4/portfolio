@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/const/colors.dart';
 import 'dart:html' as html;
@@ -53,7 +55,7 @@ Widget barlowRegular({
 Widget cvShowOrDownload() => TextButton(
   style: TextButton.styleFrom(backgroundColor: textColor),
   onPressed: () {
-    const url = 'assets/cv/Vikash Kumar (1)-2.pdf'; // path inside web/assets
+    const url = 'assets/cv/Vikash Kumar (1)-2.pdf';
     html.AnchorElement(href: url)
       ..setAttribute('download', 'Vikash_CV.pdf')
       ..click();
@@ -69,3 +71,26 @@ Future redirectWeb({required String baseUrl}) async {
     throw 'Could not launch $url';
   }
 }
+
+Future<void> launchEmail({
+  String subject = '',
+  String body = '',
+  String toEmail = 'kumarvikash91569@gmail.com',
+}) async {
+  final gmailUrl = Uri.parse(
+    'https://mail.google.com/mail/?view=cm&to=$toEmail&su=${Uri.encodeComponent(subject)}&body=${Uri.encodeComponent(body)}',
+  );
+
+  try {
+    if (await canLaunchUrl(gmailUrl)) {
+      await launchUrl(gmailUrl, mode: LaunchMode.externalApplication);
+    } else {
+      throw 'Could not launch Gmail';
+    }
+  } catch (e) {
+    log('Error launching Gmail: $e');
+  }
+}
+
+
+

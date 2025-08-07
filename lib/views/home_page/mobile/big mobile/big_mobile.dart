@@ -138,7 +138,8 @@ class _BigMobileState extends State<BigMobile> {
                     const Gap(20),
                     TextButton(
                       style: TextButton.styleFrom(backgroundColor: textColor),
-                      onPressed: () {},
+                      onPressed: () async {
+                        await launchEmail();},
                       child: barlowBold(
                         text: "Contact",
                         color: white,
@@ -219,6 +220,7 @@ class _BigMobileState extends State<BigMobile> {
                                   ),
                                 ],
                                 image: DecorationImage(
+                                   fit: BoxFit.cover,
                                   image: AssetImage("assets/logo/pic.png"),
                                 ),
                               ),
@@ -357,7 +359,7 @@ class _BigMobileState extends State<BigMobile> {
                                           ],
                                         ),
                                         child: barlowBold(
-                                          text: "2.5 Years of Experience",
+                                          text: "2.5+ Years of Experience",
                                           color: white,
                                           size: 12,
                                         ),

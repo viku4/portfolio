@@ -157,7 +157,7 @@ class _BigMobileState extends State<BigMobile> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   Container(
+                  Container(
                     key: _homeKey,
                     width: fullWidth(context),
                     height: fullHeight(context),
@@ -194,9 +194,9 @@ class _BigMobileState extends State<BigMobile> {
                                     "Hi, I'm Vikash — a Flutter Developer. I specialize in building high-performance, cross-platform mobile apps. If you're looking for a reliable developer to create or maintain your app, feel free to get in touch.",
                                     style: TextStyle(
                                       color: white,
-                                      fontSize: 20,
+                                      fontSize: 15,
                                     ),
-                                    maxLines: 4,
+                                    maxLines: 6,
                                   ),
                                   const Gap(10),
                                   cvShowOrDownload(),
@@ -206,7 +206,6 @@ class _BigMobileState extends State<BigMobile> {
                             Container(
                               height: fullHeight(context) / 1.5,
                               width: fullWidth(context) / 2,
-                            
                               decoration: BoxDecoration(
                                 color: backgroundColor,
                                 shape: BoxShape.circle,
@@ -219,9 +218,10 @@ class _BigMobileState extends State<BigMobile> {
                                     blurStyle: BlurStyle.normal,
                                   ),
                                 ],
-                                image: DecorationImage(image: AssetImage("assets/logo/pic.png",))
+                                image: DecorationImage(
+                                  image: AssetImage("assets/logo/pic.png"),
+                                ),
                               ),
-                            
                             ),
                           ],
                         ),
@@ -401,7 +401,8 @@ class _BigMobileState extends State<BigMobile> {
                         ),
                       ],
                     ),
-                  ),   Container(
+                  ),
+                  Container(
                     width: fullWidth(context),
                     height: 60,
                     alignment: Alignment.center,

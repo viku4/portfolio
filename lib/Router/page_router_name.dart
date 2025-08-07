@@ -12,6 +12,6 @@ class Routes {
 
   static const PageRouterName homeScreen = PageRouterName(
     name: "home_screen",
-    path: "/home_screen",
+    path: "/",
   );
 }

@@ -188,9 +188,9 @@ class _HomeTabletState extends State<HomeTablet> {
                                     "Hi, I'm Vikash — a Flutter Developer. I specialize in building high-performance, cross-platform mobile apps. If you're looking for a reliable developer to create or maintain your app, feel free to get in touch.",
                                     style: TextStyle(
                                       color: white,
-                                      fontSize: 20,
+                                      fontSize: 15,
                                     ),
-                                    maxLines: 4,
+                                    maxLines: 5,
                                   ),
                                   const Gap(10),
                                   cvShowOrDownload(),

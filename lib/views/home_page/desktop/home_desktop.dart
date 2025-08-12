@@ -397,10 +397,182 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     width: fullWidth(context),
                     height: 60,
                     alignment: Alignment.center,
-                    decoration: BoxDecoration(color: blue),
-                    child: barlowBold(text: "Services", color: white, size: 20),
+                    child: barlowBold(text: "My Services", color: white, size: 20),
                   ),
-                  Sliders(),
+                  const Gap(30),
+                  SizedBox(
+                    width: fullWidth(context) / 1.5,
+                    height: fullHeight(context),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 2,
+                              child: Container(
+                                margin: EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                  vertical: 5,
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                  vertical: 5,
+                                ),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: backgroundColor,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: textColor.withOpacity(0.8),
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(2, 2),
+                                      blurStyle: BlurStyle.normal,
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    barlowBold(
+                                      text: "Android App",
+                                      color: blue,
+                                      size: 20,
+                                    ),
+                                    barlowRegular(
+                                      text:
+                                          "Built using Flutter for native Android performance.Supports modern UI/UX standards.Compatible with a wide range of devices.",
+                                      color: white,
+                                      maxLine: 4,
+                                      size: 15,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Expanded(child: Container()),
+                          ],
+                        ),
+                        Container(
+                          width: 1,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: white,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
+
+                        Row(
+                          children: [
+                            Expanded(child: Container()),
+                            Expanded(
+                              flex: 2,
+                              child: Container(
+                                margin: EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                  vertical: 5,
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                  vertical: 5,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: backgroundColor,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: textColor.withOpacity(0.8),
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(2, 2),
+                                      blurStyle: BlurStyle.normal,
+                                    ),
+                                  ],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    barlowBold(
+                                      text: "Ios App",
+                                      color: blue,
+                                      size: 20,
+                                    ),
+                                    barlowRegular(
+                                      text:
+                                          "Smooth and responsive app for iOS devices. with Apple’s UI guidelines in mind.Tested on iPhone",
+                                      color: white,
+                                      maxLine: 4,
+                                      size: 15,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          width: 1,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: white,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 2,
+                              child: Container(
+                                margin: EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                  vertical: 5,
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                  vertical: 5,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: backgroundColor,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: textColor.withOpacity(0.8),
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(2, 2),
+                                      blurStyle: BlurStyle.normal,
+                                    ),
+                                  ],
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    barlowBold(
+                                      text: "Website",
+                                      color: blue,
+                                      size: 20,
+                                    ),
+                                    barlowRegular(
+                                      text:
+                                          "Fully responsive web app using Flutter Web.Accessible via all major browsers.Clean, modern, and mobile-friendly.",
+                                      color: white,
+                                      maxLine: 4,
+                                      size: 15,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Expanded(child: Container()),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                 
                   const Gap(20),
                   Container(
                     key: _blogKey,
@@ -410,7 +582,7 @@ class _HomeDesktopState extends State<HomeDesktop> {
                     decoration: BoxDecoration(color: blue),
                     child: barlowBold(text: "Blog", color: white, size: 20),
                   ),
-                  ],
+                ],
               ),
             ),
           ),

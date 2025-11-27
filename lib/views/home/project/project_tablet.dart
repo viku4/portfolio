@@ -27,7 +27,7 @@ class _ProjectTabletState extends State<ProjectTablet> {
       height: fullHeight(context) / 1.3,
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: Stack(
-        alignment: AlignmentGeometry.center,
+        alignment: Alignment.center,
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),

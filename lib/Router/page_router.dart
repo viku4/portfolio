@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/Router/page_router_name.dart';
-import 'package:flutter_web_portfolio/Router/routing_service.dart';
-import 'package:flutter_web_portfolio/views/home_page/home_page.dart';
-import 'package:flutter_web_portfolio/views/splash/splash_page.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_web_portfolio/views/home_page.dart';
+import 'package:flutter_web_portfolio/Router/routing_service.dart';
+import 'package:flutter_web_portfolio/Router/page_router_name.dart';
+import 'package:flutter_web_portfolio/views/splash/splash_page.dart';
 
 class PageRouter {
   final GlobalKey<NavigatorState> shellNavigatorKey =

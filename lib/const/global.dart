@@ -1,4 +1,6 @@
 import 'package:flutter_web_portfolio/data/models/blog_post.dart';
+import 'package:flutter_web_portfolio/data/models/company_model.dart';
+import 'package:flutter_web_portfolio/data/models/project_model.dart';
 
 List service = [
   "assets/services/Mobile App Development.png",
@@ -56,3 +58,61 @@ List<BlogPost> getBlog = [
   ),
 ];
 
+List<ProjectModel> project = [
+  ProjectModel.fromJson({
+    "title": "Node API",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "details": [
+      "Developed backend APIs to capture salesman activities including daily follow-up, recall, and work updates.",
+      "Implemented secure authentication, role-based access, and fast data processing for real-time activity reporting.",
+    ],
+  }),
+  ProjectModel.fromJson({
+    "title": "KrishiVikas",
+    "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854",
+    "details": [
+      "Built a buyer–seller agriculture marketplace with 8 major categories, including Rent, Used, and New product listings.",
+      "Added chat, cart, wishlist, and order features, integrating secure backend APIs using Provider with optimized UI/UX.",
+    ],
+    "links": {
+      "android":
+          "https://play.google.com/store/apps/details?id=com.krishivikas.android&pcampaignid=web_share",
+      "ios":
+          "https://apps.apple.com/in/app/krishi-vikas-udyog-kisan-app/id6449253442",
+    },
+  }),
+  ProjectModel.fromJson({
+    "title": "Abybaby Attendance Management System",
+    "image": "https://images.unsplash.com/photo-1521791055366-0d553872125f",
+    "details": [
+      "Developed a complete employee attendance app with check-in/out, GPS tracking, leave requests, and work logs.",
+      "Implemented real-time location validation, secure API integration, and a responsive UI using GetX.",
+    ],
+    "links": {
+      "android":
+          "https://play.google.com/store/apps/details?id=com.abybaby.attendance_hrms&pcampaignid=web_share",
+      "ios": "#",
+    },
+  }),
+  ProjectModel.fromJson({
+    "title": "Abybaby Project Management System",
+    "image": "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d",
+    "details": [
+      "Built a project and task management system with team assignment, progress tracking, and status monitoring.",
+      "Integrated secure backend APIs, optimized workflows, and designed a clean, efficient UI with GetX.",
+    ],
+    "links": {
+      "android":
+          "https://play.google.com/store/apps/details?id=com.abybaby.pms&pcampaignid=web_share",
+      "ios": "#",
+    },
+  }),
+  ProjectModel.fromJson({
+    "title": "DigiPrivilege – Hotel Booking System",
+    "image": "https://images.unsplash.com/photo-1505691723518-36a5ac3be353",
+    "details": [
+      "Developed a hotel booking platform with room listings, availability checks, secure reservation flow, check-in/out, pricing rules, discounts, and booking history.",
+      "Integrated backend APIs with an optimized, fast, and smooth UI/UX for reliable hotel management.",
+    ],
+  }),
+];

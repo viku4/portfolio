@@ -1,10 +1,8 @@
 import 'dart:developer';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/const/colors.dart';
 import 'dart:html' as html;
-
+import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_web_portfolio/const/colors.dart';
 
 Widget barlowBold({
   String text = "",
@@ -52,7 +50,7 @@ Widget barlowRegular({
   ),
 );
 
-Widget cvShowOrDownload() => TextButton(
+Widget cvShowOrDownload({double? size}) => TextButton(
   style: TextButton.styleFrom(backgroundColor: textColor),
   onPressed: () {
     const url = 'assets/cv/Vikash Kumar (1)-2.pdf';
@@ -60,7 +58,7 @@ Widget cvShowOrDownload() => TextButton(
       ..setAttribute('download', 'Vikash_CV.pdf')
       ..click();
   },
-  child: barlowBold(text: "DownLoad CV", color: white, size: 15),
+  child: barlowBold(text: "DownLoad CV", color: white, size: size ?? 15),
 );
 
 Future redirectWeb({required String baseUrl}) async {
@@ -91,6 +89,3 @@ Future<void> launchEmail({
     log('Error launching Gmail: $e');
   }
 }
-
-
-

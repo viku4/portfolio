@@ -77666,7 +77666,7 @@ return new A.m2(A.axh(s,s,new A.dK("assets/banner_placeholder.png",s,s)),s,s,s,s
 $S:498}
 A.apI.prototype={
 $0(){var s=document.createElement("a")
-s.href="assets/cv/Vikash Kumar (1)-2.pdf"
+s.href="cv.pdf"
 s.setAttribute("download","Vikash_CV.pdf")
 s.click()},
 $S:0}
@@ -77777,7 +77777,7 @@ n=$.cg()
 q=A.dL(10)
 j=$.cL()
 o=A.b([new A.bK(2,B.T,A.aw(l,j.C()>>>16&255,j.C()>>>8&255,j.C()&255),new A.j(2,2),5)],o)
-return A.bl(i,A.ds(A.b([r,A.fp(A.Hk(B.ag,A.hn(B.c5,A.b([new A.cE(B.C4,p,i),m,A.eJ(i,A.bl(i,A.jv(i,i,i,B.aO,i,i,!0,i,A.bo(A.b([A.bo(i,A.bL(i,i,B.f,i,i,i,i,i,i,i,i,20,i,i,i,i,i,!0,i,i,i,i,i,i,i,i),"10"),A.q0(A.mY(A.dk("+",i,i,A.bL(i,i,B.f,i,i,i,i,i,i,i,i,15,i,i,i,i,i,!0,i,i,i,i,i,i,i,i),i,i),B.c0)),A.bo(i,A.bL(i,i,B.f,i,i,i,i,i,i,i,i,15,i,i,i,i,i,!0,i,i,i,i,i,i,i,i),"  Projects Completed")],k),i,i),B.ad,i,i,B.Q,B.ae),B.n,i,new A.bD(n,i,i,q,o,i,B.a2),i,i,i,new A.at(20,10,20,10),i),i,i,50,i,70,i)],s),B.J,B.b2)))],s),B.z,B.w,B.t,0),B.n,i,i,h.a.b,this.c,i,new A.at(0,10,0,10),g.a.a)}}
+return A.bl(i,A.ds(A.b([r,A.fp(A.Hk(B.ag,A.hn(B.c5,A.b([new A.cE(B.C4,p,i),m,A.eJ(i,A.bl(i,A.jv(i,i,i,B.aO,i,i,!0,i,A.bo(A.b([A.bo(i,A.bL(i,i,B.f,i,i,i,i,i,i,i,i,20,i,i,i,i,i,!0,i,i,i,i,i,i,i,i),"10"),A.q0(A.mY(A.dk("+",i,i,A.bL(i,i,B.f,i,i,i,i,i,i,i,i,15,i,i,i,i,i,!0,i,i,i,i,i,i,i,i),i,i),B.c0)),A.bo(i,A.bL(i,i,B.f,i,i,i,i,i,i,i,i,15,i,i,i,i,i,!0,i,i,i,i,i,i,i,i),"  Projects Completed")],k),i,i),B.ad,i,i,B.Q,B.ae),B.n,i,new A.bD(n,i,i,q,o,i,B.a2),i,i,i,new A.at(20,10,20,10),i),i,i,50,i,70,i)],s),B.J,B.b2)))],s),B.z,B.w,B.t,15),B.n,i,i,h.a.b,this.c,i,new A.at(0,10,0,10),g.a.a)}}
 A.HM.prototype={
 O(a){var s,r,q,p,o,n,m=null,l=t.w,k=A.aH(a,m,l).w,j=A.aH(a,m,l).w,i=A.dk(u.o,3,m,A.bL(m,m,$.cL(),m,m,m,m,m,m,m,m,25,m,m,B.cf,m,m,!0,m,m,m,m,m,m,m,m),m,m),h=A.dk(u.c,6,m,A.bL(m,m,B.f,m,m,m,m,m,m,m,m,15,m,m,m,m,m,!0,m,m,m,m,m,m,m,m),m,m),g=$.cg(),f=A.dL(10),e=$.auf(),d=t.sq
 e=A.b([new A.bK(2,B.T,A.aw(B.d.ap(127.5),e.C()>>>16&255,e.C()>>>8&255,e.C()&255),new A.j(2,2),5)],d)
@@ -83657,7 +83657,7 @@ B.ik=new A.aO(75e3)
 B.C2=new A.aO(-38e3)
 B.C3=new A.a08(0,"tonalSpot")
 B.bX=new A.at(0,0,0,0)
-B.C4=new A.at(0,20,0,20)
+B.C4=new A.at(10,20,10,20)
 B.C5=new A.at(12,8,12,8)
 B.C6=new A.at(16,0,16,0)
 B.C7=new A.at(16,18,16,18)

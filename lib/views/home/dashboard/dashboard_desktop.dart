@@ -16,6 +16,7 @@ class HomeDesktop extends StatelessWidget {
       height: fullHeight(context),
       padding: EdgeInsets.only(top: 10, bottom: 10),
       child: Row(
+        spacing: 15,
         children: [
           Expanded(
             child: Padding(
@@ -50,7 +51,7 @@ class HomeDesktop extends StatelessWidget {
               child: Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 10),
                     child: Container(
                       decoration: BoxDecoration(
                         color: backgroundColor,

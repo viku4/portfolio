@@ -30,20 +30,26 @@ class _HomeHeaderState extends State<HomeHeader> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          InkWell(
-            onTap: () {
-              html.window.location.reload();
-            },
-            child: Container(
-              width: 200,
-              height: 50,
-              decoration: BoxDecoration(
-                // color: white,
-                image: DecorationImage(
-                  image: AssetImage("assets/logo/white_logo.png"),
-                  fit: BoxFit.cover,
+          Expanded(
+            child: Row(
+              children: [
+                InkWell(
+                  onTap: () {
+                    html.window.location.reload();
+                  },
+                  child: Container(
+                    width: 200,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      // color: white,
+                      image: DecorationImage(
+                        image: AssetImage("assets/logo/white_logo.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ),
           Row(
@@ -126,6 +132,7 @@ class _HomeHeaderState extends State<HomeHeader> {
                 ),
                 child: barlowBold(text: "Work", size: 15),
               ),
+
               const Gap(20),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: textColor),

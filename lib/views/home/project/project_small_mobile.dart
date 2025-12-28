@@ -94,7 +94,7 @@ class _ProjectSmallMobileState extends State<ProjectSmallMobile> {
                                                     text: discription,
                                                     color: black,
                                                     size: 18,
-                                                    maxLine: 3,
+                                                    maxLine: 5,
                                                   ),
                                                 ),
                                               ],

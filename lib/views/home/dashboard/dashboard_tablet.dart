@@ -15,9 +15,8 @@ class HomeTablet extends StatelessWidget {
     return Container(
       key: homeKey,
       width: fullWidth(context),
-      height: fullHeight(context),
+      height: fullHeight(context) / 1.4,
       padding: EdgeInsets.only(top: 10, bottom: 10),
-      // decoration: BoxDecoration(color: black),
       child: Column(
         children: [
           const Gap(10),
@@ -25,7 +24,7 @@ class HomeTablet extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                height: fullHeight(context) / 1.5,
+                height: fullHeight(context) / 2,
                 width: fullWidth(context) / 2,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 30,
@@ -56,7 +55,7 @@ class HomeTablet extends StatelessWidget {
                 ),
               ),
               Container(
-                height: fullHeight(context) / 1.5,
+                height: fullHeight(context) / 2.5,
                 width: fullWidth(context) / 2,
 
                 decoration: BoxDecoration(
@@ -284,6 +283,7 @@ class HomeTablet extends StatelessWidget {
                                 ),
                                 TextSpan(
                                   text: "  Projects Completed",
+
                                   style: TextStyle(color: white, fontSize: 15),
                                 ),
                               ],

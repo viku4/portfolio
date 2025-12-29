@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/data/models/blog_post.dart';
 import 'package:flutter_web_portfolio/data/models/company_model.dart';
 import 'package:flutter_web_portfolio/data/models/project_model.dart';
+import 'package:flutter_web_portfolio/data/models/skill_category_model.dart';
 
 List service = [
   "assets/services/Mobile App Development.png",
@@ -115,4 +117,160 @@ List<ProjectModel> project = [
       "Integrated backend APIs with an optimized, fast, and smooth UI/UX for reliable hotel management.",
     ],
   }),
+];
+
+
+
+
+
+
+final List<Skill> skills = [
+  // ---------- FLUTTER / MOBILE ----------
+  Skill(
+    name: "Dart",
+    category: "Flutter / Mobile",
+    level: 90,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
+  ),
+  Skill(
+    name: "Flutter",
+    category: "Flutter / Mobile",
+    level: 90,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+  ),
+  Skill(
+    name: "Android App Development",
+    category: "Flutter / Mobile",
+    level: 85,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+  ),
+
+  Skill(
+    name: "iOS App Development",
+    category: "Flutter / Mobile",
+    level: 75,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
+  ),
+
+  Skill(
+    name: "Flutter Web Development",
+    category: "Flutter / Mobile",
+    level: 39,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+  ),
+  Skill(
+    name: "Provider / GetX / Bloc",
+    category: "Flutter / Mobile",
+    level: 85,
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
+  ),
+  Skill(
+    name: "REST API Integration",
+    category: "Flutter / Mobile",
+    level: 85,
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/2165/2165004.png",
+  ),
+  Skill(
+    name: "Firebase (Auth, Firestore, FCM)",
+    category: "Flutter / Mobile",
+    level: 80,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  ),
+  Skill(
+    name: "SQLite / SharedPreferences",
+    category: "Flutter / Mobile",
+    level: 80,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+  ),
+  Skill(
+    name: "Responsive UI",
+    category: "Flutter / Mobile",
+    level: 85,
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/1055/1055687.png",
+  ),
+  Skill(
+    name: "App Store Deployment",
+    category: "Flutter / Mobile",
+    level: 70,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
+  ),
+  Skill(
+    name: "Play Store Release",
+    category: "Flutter / Mobile",
+    level: 75,
+    imageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg",
+  ),
+
+  // ---------- BACKEND ----------
+  Skill(
+    name: "Node.js",
+    category: "Backend (Node.js)",
+    level: 40,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  ),
+  Skill(
+    name: "Express.js",
+    category: "Backend (Node.js)",
+    level: 35,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  ),
+  Skill(
+    name: "REST APIs",
+    category: "Backend (Node.js)",
+    level: 45,
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/2165/2165004.png",
+  ),
+  Skill(
+    name: "JWT Authentication",
+    category: "Backend (Node.js)",
+    level: 50,
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/2913/2913465.png",
+  ),
+  Skill(
+    name: "MongoDB / MySQL",
+    category: "Backend (Node.js)",
+    level: 20,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  ),
+  Skill(
+    name: "API Security",
+    category: "Backend (Node.js)",
+    level: 20,
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/3064/3064197.png",
+  ),
+
+  // ---------- TOOLS ----------
+  Skill(
+    name: "Git / GitHub",
+    category: "Tools",
+    level: 85,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  ),
+  Skill(
+    name: "Postman",
+    category: "Tools",
+    level: 80,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+  ),
+  Skill(
+    name: "VS Code",
+    category: "Tools",
+    level: 90,
+    imageUrl:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  ),
 ];

@@ -13,7 +13,7 @@ class DashboardSmallMobile extends StatelessWidget {
     return Container(
       key: homeKey,
       width: fullWidth(context),
-      height: fullHeight(context),
+      height: fullHeight(context)/1.5,
       padding: EdgeInsets.all(20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -33,228 +33,252 @@ class DashboardSmallMobile extends StatelessWidget {
             maxLines: 6,
           ),
           const Gap(10),
-          Row(
-            spacing: 10,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: EdgeInsets.all(25),
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: backgroundColor,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: cColor.withOpacity(.5),
-                      blurRadius: 5,
-                      spreadRadius: 2,
-                      offset: Offset(2, 2),
-                      blurStyle: BlurStyle.normal,
-                    ),
-                  ],
+          Container(
+            padding: EdgeInsets.all(20),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: backgroundColor,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: cColor.withOpacity(.5),
+                  blurRadius: 5,
+                  spreadRadius: 2,
+                  offset: Offset(2, 2),
+                  blurStyle: BlurStyle.normal,
                 ),
-                child: Column(
-                  spacing: 15,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 5,
-                      ),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: backgroundColor,
-                        border: Border.all(color: white),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: "3",
-                              style: TextStyle(color: white, fontSize: 12),
-                            ),
-                            WidgetSpan(
-                              child: Transform.translate(
-                                offset: const Offset(0, -4), // moves + upward
-                                child: Text(
-                                  "+",
-                                  style: TextStyle(color: white, fontSize: 10),
-                                ),
-                              ),
-                            ),
-                            TextSpan(
-                              text: "  Years of Experience",
-                              style: TextStyle(color: white, fontSize: 10),
+              ],
+            ),
+            child: Row(
+              spacing: 20,
+              children: [
+                Expanded(
+                  child: Column(
+                    spacing: 20,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        // alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: backgroundColor,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: cColor.withOpacity(.5),
+                              blurRadius: 5,
+                              spreadRadius: 2,
+                              offset: Offset(2, 2),
+                              blurStyle: BlurStyle.normal,
                             ),
                           ],
                         ),
-                      ),
-                    ),
-
-                    Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 5,
-                      ),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: backgroundColor,
-                        border: Border.all(color: white),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: "10",
-                              style: TextStyle(color: white, fontSize: 12),
-                            ),
-                            WidgetSpan(
-                              child: Transform.translate(
-                                offset: const Offset(0, -4), // moves + upward
-                                child: Text(
-                                  "+",
-                                  style: TextStyle(color: white, fontSize: 10),
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "3",
+                                style: TextStyle(color: white, fontSize: 12),
+                              ),
+                              WidgetSpan(
+                                child: Transform.translate(
+                                  offset: const Offset(
+                                    0,
+                                    -4,
+                                  ), // moves + upward
+                                  child: Text(
+                                    "+",
+                                    style: TextStyle(
+                                      color: white,
+                                      fontSize: 10,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                            TextSpan(
-                              text: "  Projects Completed",
-                              style: TextStyle(color: white, fontSize: 10),
+                              TextSpan(
+                                text: "  Years of Experience",
+                                style: TextStyle(color: white, fontSize: 10),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+          
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: backgroundColor,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: cColor.withOpacity(.5),
+                              blurRadius: 5,
+                              spreadRadius: 2,
+                              offset: Offset(2, 2),
+                              blurStyle: BlurStyle.normal,
                             ),
                           ],
                         ),
+                        child: RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "10",
+                                style: TextStyle(color: white, fontSize: 12),
+                              ),
+                              WidgetSpan(
+                                child: Transform.translate(
+                                  offset: const Offset(
+                                    0,
+                                    -4,
+                                  ), // moves + upward
+                                  child: Text(
+                                    "+",
+                                    style: TextStyle(
+                                      color: white,
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              TextSpan(
+                                text: "  Projects Completed",
+                                style: TextStyle(color: white, fontSize: 10),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        InkWell(
-                          onTap: () async {
-                            await redirectWeb(
-                              baseUrl:
-                                  "https://www.instagram.com/indiancoder.in",
-                            );
-                          },
-                          child: Container(
-                            width: 30,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: textColor.withOpacity(0.8),
-                                  blurRadius: 10,
-                                  spreadRadius: 2,
-                                  offset: Offset(2, 2),
-                                  blurStyle: BlurStyle.normal,
-                                ),
-                              ],
-                              color: backgroundColor,
-                              shape: BoxShape.circle,
-
-                              image: DecorationImage(
-                                fit: BoxFit.contain,
-                                image: AssetImage(
-                                  "assets/socialmedia/instagram.png",
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const Gap(20),
-                        InkWell(
-                          onTap: () async {
-                            await redirectWeb(
-                              baseUrl: "https://github.com/viku4/",
-                            );
-                          },
-                          child: Container(
-                            width: 30,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: textColor.withOpacity(0.8),
-                                  blurRadius: 10,
-                                  spreadRadius: 2,
-                                  offset: Offset(2, 2),
-                                  blurStyle: BlurStyle.normal,
-                                ),
-                              ],
-                              color: backgroundColor,
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                fit: BoxFit.contain,
-                                image: AssetImage(
-                                  "assets/socialmedia/github.png",
+          
+                      Row(
+                        children: [
+                          InkWell(
+                            onTap: () async {
+                              await redirectWeb(
+                                baseUrl:
+                                    "https://www.instagram.com/indiancoder.in",
+                              );
+                            },
+                            child: Container(
+                              width: fullWidth(context) / 15,
+                              height: fullHeight(context) / 50,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: textColor.withOpacity(0.8),
+                                    blurRadius: 10,
+                                    spreadRadius: 2,
+                                    offset: Offset(2, 2),
+                                    blurStyle: BlurStyle.normal,
+                                  ),
+                                ],
+                                color: backgroundColor,
+                                shape: BoxShape.circle,
+          
+                                image: DecorationImage(
+                                  fit: BoxFit.contain,
+                                  image: AssetImage(
+                                    "assets/socialmedia/instagram.png",
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                        const Gap(20),
-                        InkWell(
-                          onTap: () async {
-                            await redirectWeb(
-                              baseUrl:
-                                  "https://www.linkedin.com/in/vikash-srivastav-68b126233/",
-                            );
-                          },
-                          child: Container(
-                            width: 30,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: textColor.withOpacity(0.8),
-                                  blurRadius: 10,
-                                  spreadRadius: 2,
-                                  offset: Offset(2, 2),
-                                  blurStyle: BlurStyle.normal,
-                                ),
-                              ],
-                              color: backgroundColor,
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                fit: BoxFit.contain,
-                                image: AssetImage(
-                                  "assets/socialmedia/linkdin.png",
+                          const Gap(10),
+                          InkWell(
+                            onTap: () async {
+                              await redirectWeb(
+                                baseUrl: "https://github.com/viku4/",
+                              );
+                            },
+                            child: Container(
+                              width: fullWidth(context) / 15,
+                              height: fullHeight(context) / 50,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: textColor.withOpacity(0.8),
+                                    blurRadius: 10,
+                                    spreadRadius: 2,
+                                    offset: Offset(2, 2),
+                                    blurStyle: BlurStyle.normal,
+                                  ),
+                                ],
+                                color: backgroundColor,
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  fit: BoxFit.contain,
+                                  image: AssetImage(
+                                    "assets/socialmedia/github.png",
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    cvShowOrDownload(size: 10),
-                  ],
-                ),
-              ),
-
-              Container(
-                width: fullWidth(context) / 2.5,
-                height: fullHeight(context) / 2,
-                decoration: BoxDecoration(
-                  color: backgroundColor,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: textColor.withOpacity(0.8),
-                      blurRadius: 10,
-                      spreadRadius: 5,
-                      offset: Offset(4, 4),
-                      blurStyle: BlurStyle.normal,
-                    ),
-                  ],
-                  image: DecorationImage(
-                    fit: BoxFit.contain,
-                    image: AssetImage("assets/logo/pic.png"),
+                          const Gap(10),
+                          InkWell(
+                            onTap: () async {
+                              await redirectWeb(
+                                baseUrl:
+                                    "https://www.linkedin.com/in/vikash-srivastav-68b126233/",
+                              );
+                            },
+                            child: Container(
+                              width: fullWidth(context) / 15,
+                              height: fullHeight(context) / 50,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: textColor.withOpacity(0.8),
+                                    blurRadius: 10,
+                                    spreadRadius: 2,
+                                    offset: Offset(2, 2),
+                                    blurStyle: BlurStyle.normal,
+                                  ),
+                                ],
+                                color: backgroundColor,
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  fit: BoxFit.contain,
+                                  image: AssetImage(
+                                    "assets/socialmedia/linkdin.png",
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      cvShowOrDownload(size: fullWidth(context) / 60),
+                    ],
                   ),
                 ),
-              ),
-            ],
+                Expanded(
+                  child: Container(
+                    height: 150,
+                    padding: EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      color: backgroundColor,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: textColor.withOpacity(0.8),
+                          blurRadius: 10,
+                          spreadRadius: 5,
+                          offset: Offset(4, 4),
+                          blurStyle: BlurStyle.normal,
+                        ),
+                      ],
+                      image: DecorationImage(
+                        fit: BoxFit.contain,
+                        image: AssetImage("assets/logo/pic.png"),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

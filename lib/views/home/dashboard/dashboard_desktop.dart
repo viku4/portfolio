@@ -13,7 +13,7 @@ class HomeDesktop extends StatelessWidget {
     return Container(
       key: homeKey,
       width: fullWidth(context),
-      height: fullHeight(context),
+      height: fullHeight(context) / 1.1,
       padding: EdgeInsets.only(top: 10, bottom: 10),
       child: Row(
         spacing: 15,
@@ -50,26 +50,26 @@ class HomeDesktop extends StatelessWidget {
             child: ClipRRect(
               child: Stack(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: backgroundColor,
-                        shape: BoxShape.circle,
-                        boxShadow: [
-                          BoxShadow(
-                            color: textColor.withOpacity(0.8),
-                            blurRadius: 10,
-                            spreadRadius: 5,
-                            offset: Offset(4, 4),
-                            blurStyle: BlurStyle.normal,
-                          ),
-                        ],
+                  Container(
+                    // padding: const EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(20),
 
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage("assets/logo/pic.png"),
+                    decoration: BoxDecoration(
+                      color: backgroundColor,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                          color: textColor.withOpacity(0.8),
+                          blurRadius: 10,
+                          spreadRadius: 5,
+                          offset: Offset(4, 4),
+                          blurStyle: BlurStyle.normal,
                         ),
+                      ],
+
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage("assets/logo/pic.png"),
                       ),
                     ),
                   ),

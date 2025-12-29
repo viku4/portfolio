@@ -24,13 +24,14 @@ class _ProjectTabletState extends State<ProjectTablet> {
     return Container(
       key: widget.projectKey,
       width: fullWidth(context),
-      height: fullHeight(context) / 1.3,
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      height: fullHeight(context) / 1.4,
+      padding: EdgeInsets.only(top: 10, bottom: 10),
+      alignment: Alignment.center,
       child: Stack(
         alignment: Alignment.center,
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               controller: _controller,
@@ -43,18 +44,19 @@ class _ProjectTabletState extends State<ProjectTablet> {
                     child: Stack(
                       children: [
                         Container(
-                          color: white,
+                          color: blue.withOpacity(.1),
+                          width: fullWidth(context) / 4,
                           child: Column(
                             spacing: 10,
                             children: [
                               CustomCachedNetworkImage(
                                 imageUrl: ds.image ?? "",
                                 width: fullWidth(context) / 2,
-                                height: fullHeight(context) / 3,
+                                height: 150,
                               ),
+
                               Container(
                                 padding: EdgeInsets.all(10),
-                                color: white,
                                 width: fullWidth(context) / 2,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -62,8 +64,8 @@ class _ProjectTabletState extends State<ProjectTablet> {
                                   children: [
                                     barlowBold(
                                       text: ds.title ?? "",
-                                      color: black,
-                                      size: 20,
+                                      color: white,
+                                      size: 15,
                                       maxLine: 2,
                                     ),
                                     Gap(5),
@@ -86,14 +88,14 @@ class _ProjectTabletState extends State<ProjectTablet> {
                                               children: [
                                                 barlowBold(
                                                   text: "-",
-                                                  color: black,
-                                                  size: 15,
+                                                  color: white,
+                                                  size: 12,
                                                 ),
                                                 Expanded(
                                                   child: barlowRegular(
                                                     text: discription,
-                                                    color: black,
-                                                    size: 18,
+                                                    color: white,
+                                                    size: 12,
                                                     maxLine: 3,
                                                   ),
                                                 ),
@@ -106,6 +108,7 @@ class _ProjectTabletState extends State<ProjectTablet> {
                                   ],
                                 ),
                               ),
+                              Gap(30),
                             ],
                           ),
                         ),
@@ -126,7 +129,9 @@ class _ProjectTabletState extends State<ProjectTablet> {
           Positioned(
             left: 0,
             child: IconButton(
-              style: IconButton.styleFrom(backgroundColor: backgroundColor),
+              style: IconButton.styleFrom(
+                backgroundColor: backgroundColor.withOpacity(.1),
+              ),
               icon: Icon(Icons.arrow_back_ios, size: 15, color: white),
               onPressed: () {
                 _controller.animateTo(
@@ -140,7 +145,9 @@ class _ProjectTabletState extends State<ProjectTablet> {
           Positioned(
             right: 0,
             child: IconButton(
-              style: IconButton.styleFrom(backgroundColor: backgroundColor),
+              style: IconButton.styleFrom(
+                backgroundColor: backgroundColor.withOpacity(.1),
+              ),
               icon: Icon(Icons.arrow_forward_ios, size: 15, color: white),
               onPressed: () {
                 _controller.animateTo(

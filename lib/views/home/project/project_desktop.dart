@@ -24,8 +24,9 @@ class _ProjectDesktopState extends State<ProjectDesktop> {
     return Container(
       key: widget.projectKey,
       width: fullWidth(context),
-      height: fullHeight(context) / 1.3,
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      height: fullHeight(context) / 1.4,
+      padding: EdgeInsets.all(20),
+      alignment: Alignment.center,
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -43,28 +44,28 @@ class _ProjectDesktopState extends State<ProjectDesktop> {
                     child: Stack(
                       children: [
                         Container(
-                          color: white,
+                          color: blue.withOpacity(.1),
+                           width: fullWidth(context) / 4,
                           child: Column(
                             spacing: 10,
                             children: [
                               CustomCachedNetworkImage(
                                 imageUrl: ds.image ?? "",
-                                width: fullWidth(context) / 3,
-                                height: fullHeight(context) / 3,
+                                width: fullWidth(context) / 4,
+                                height: 150,
                               ),
 
                               Container(
                                 padding: EdgeInsets.all(10),
-                                color: white,
-                                width: fullWidth(context) / 3,
+                                width: fullWidth(context) / 4,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     barlowBold(
                                       text: ds.title ?? "",
-                                      color: black,
-                                      size: 20,
+                                      color: white,
+                                      size: 15,
                                       maxLine: 2,
                                     ),
                                     Gap(5),
@@ -87,14 +88,14 @@ class _ProjectDesktopState extends State<ProjectDesktop> {
                                               children: [
                                                 barlowBold(
                                                   text: "-",
-                                                  color: black,
-                                                  size: 15,
+                                                  color: white,
+                                                  size: 12,
                                                 ),
                                                 Expanded(
                                                   child: barlowRegular(
                                                     text: discription,
-                                                    color: black,
-                                                    size: 18,
+                                                    color: white,
+                                                    size: 12,
                                                     maxLine: 3,
                                                   ),
                                                 ),
@@ -107,6 +108,7 @@ class _ProjectDesktopState extends State<ProjectDesktop> {
                                   ],
                                 ),
                               ),
+                              Gap(30),
                             ],
                           ),
                         ),
@@ -127,7 +129,9 @@ class _ProjectDesktopState extends State<ProjectDesktop> {
           Positioned(
             left: 0,
             child: IconButton(
-              style: IconButton.styleFrom(backgroundColor: backgroundColor),
+              style: IconButton.styleFrom(
+                backgroundColor: backgroundColor.withOpacity(.1),
+              ),
               icon: Icon(Icons.arrow_back_ios, size: 15, color: white),
               onPressed: () {
                 _controller.animateTo(
@@ -141,7 +145,9 @@ class _ProjectDesktopState extends State<ProjectDesktop> {
           Positioned(
             right: 0,
             child: IconButton(
-              style: IconButton.styleFrom(backgroundColor: backgroundColor),
+              style: IconButton.styleFrom(
+                backgroundColor: backgroundColor.withOpacity(.1),
+              ),
               icon: Icon(Icons.arrow_forward_ios, size: 15, color: white),
               onPressed: () {
                 _controller.animateTo(

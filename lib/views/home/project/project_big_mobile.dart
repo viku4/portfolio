@@ -24,7 +24,7 @@ class _ProjectBigMobileState extends State<ProjectBigMobile> {
     return Container(
       key: widget.projectKey,
       width: fullWidth(context),
-      height: fullHeight(context) / 1.3,
+      height: fullHeight(context) / 1.4,
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: Stack(
         alignment: Alignment.center,
@@ -42,8 +42,9 @@ class _ProjectBigMobileState extends State<ProjectBigMobile> {
                     borderRadius: BorderRadiusGeometry.circular(10),
                     child: Stack(
                       children: [
-                        Container(
-                          color: white,
+                      Container(
+                          color: blue.withOpacity(.1),
+                           width: fullWidth(context) / 4,
                           child: Column(
                             spacing: 10,
                             children: [
@@ -63,7 +64,7 @@ class _ProjectBigMobileState extends State<ProjectBigMobile> {
                                     barlowBold(
                                       text: ds.title ?? "",
                                       color: black,
-                                      size: 20,
+                                      size: 15,
                                       maxLine: 2,
                                     ),
                                     Gap(5),
@@ -93,7 +94,7 @@ class _ProjectBigMobileState extends State<ProjectBigMobile> {
                                                   child: barlowRegular(
                                                     text: discription,
                                                     color: black,
-                                                    size: 18,
+                                                    size: 12,
                                                     maxLine: 3,
                                                   ),
                                                 ),

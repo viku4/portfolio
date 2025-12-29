@@ -4,6 +4,7 @@ Color black = Colors.black;
 Color white = Colors.white;
 Color grey = Colors.grey;
 Color blue = Colors.blue;
+Color background1Color = Color.fromARGB(255, 23, 40, 51);
 Color backgroundColor = Color(0xFF081B28);
 Color textColor = Color(0xFF019edb);
 Color cColor = Color(0xAA019EDB);
